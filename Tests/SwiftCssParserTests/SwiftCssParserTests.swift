@@ -15,6 +15,44 @@ class SwiftCssParserTests: XCTestCase {
         return SwiftCSS(CssFileURL: cssPath!)
     }()
     
+    lazy var testCSSString: String = {
+        let cssPath = Bundle.module.url(forResource: "tests", withExtension: "css")
+        var text = ""
+        do {
+            text = try String(contentsOf: cssPath!)
+        } catch {}
+        return text
+    }()
+    
+    //MARK: - SPECIALIZED
+    func testSpecialKey() {
+        var divisions: [String] = []
+        divisions = testCSSString.components(separatedBy: ";")
+        print(divisions)
+        
+        var loop = 0
+        var index: Int?
+        
+        for component in divisions {
+            if component.contains("width") {
+                index = loop
+                break
+            } else {
+                loop += 1
+            }
+        }
+        
+//        print("divisions.count = \(divisions.count)")
+        print("specials key is \(testCSS.int(selector: "#View", key: "specials"))")
+//
+        XCTAssertTrue(index == 0)
+        
+//        let specialKey = testCSS.int(selector: "#View", key: "special")
+//        XCTAssertTrue(specialKey == 100)
+    }
+    
+    
+    //MARK: - TYPES
     func testInt() {
         let width = testCSS.int(selector: "#View", key: "width")
         XCTAssertTrue(width == 118, "get width")
