@@ -65,10 +65,10 @@ public class SwiftCSS {
         if let name: String = value(selector: selector, key: key) {
             return Font.custom(name, size: fontSize)
         } else if let dic: [String:Any] = value(selector: selector, key: key) {
-            guard let name = dic["name"] as? String, let _ = dic["size"] as? Double else {
+            guard let name = dic["name"] as? String, let size = dic["size"] as? Double else {
                 return defaultReturnValue
             }
-            return Font.custom(name, size: fontSize)
+            return Font.custom(name, size: size)
         } else {
             return defaultReturnValue
         }
