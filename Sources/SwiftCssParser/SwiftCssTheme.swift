@@ -77,8 +77,7 @@ extension UIView {
     
     @objc private dynamic func _cssUpdateBackgroundColor() {
         
-        self.backgroundColor = SwiftCssTheme.themeCSS.color(selector: self.backgroundColorCSS.selector, key: self.backgroundColorCSS.key)
-        
+        self.backgroundColor = UIColor(SwiftCssTheme.themeCSS.color(selector: self.backgroundColorCSS.selector, key: self.backgroundColorCSS.key))
     }
     
 }
