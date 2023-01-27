@@ -210,6 +210,9 @@ CocoaPods:
 pod 'SwiftCssParser'
 ~~~
 
+Swift Package:
+
+`https://github.com/wilmaplus/SwiftCssParser.git`
 
 ## License
 
