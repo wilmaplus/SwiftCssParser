@@ -5,7 +5,7 @@
 
 
 
-A Powerful , Extensible CSS Parser written in pure Swift.
+A Powerful, Extensible CSS Parser written in pure Swift.
 
 
 
