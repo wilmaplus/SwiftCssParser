@@ -1,6 +1,3 @@
-<p align="center"> <img src="icon.jpeg" />
-<br>
-
 A Powerful, Extensible CSS Parser written in pure Swift.
 
 
