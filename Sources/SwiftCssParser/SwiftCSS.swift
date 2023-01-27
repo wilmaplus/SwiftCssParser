@@ -20,6 +20,12 @@ public class SwiftCSS {
         parsedCss = parser.outputDic
     }
     
+    public init(cssCode: String) {
+        let lexer = CssLexer(input: cssCode)
+        let parser = CssParser(lexer: lexer)
+        parser.parse()
+        parsedCss = parser.outputDic
+    }
     
     public func int(selector: String, key: String) -> Int {
         
