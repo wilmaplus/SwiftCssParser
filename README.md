@@ -1,10 +1,6 @@
 <p align="center"> <img src="icon.jpeg" />
 <br>
 
-  ![](http://img.shields.io/badge/Swift-5.0-orange.svg)
-
-
-
 A Powerful, Extensible CSS Parser written in pure Swift.
 
 
